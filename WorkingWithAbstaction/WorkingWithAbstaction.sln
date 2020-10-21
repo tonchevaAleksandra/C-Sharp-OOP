@@ -5,15 +5,19 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithAbstractionLAB", "WorkingWithAbstractionLAB", "{3D8FD08E-DFFE-47C3-AA89-B7996416A2F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentSystem", "StudentSystem\StudentSystem.csproj", "{BAFB0DD5-D3C8-426F-914A-468593A5CE92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentSystem", "StudentSystem\StudentSystem.csproj", "{BAFB0DD5-D3C8-426F-914A-468593A5CE92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rhombusOfStars", "rhombusOfStars\rhombusOfStars.csproj", "{2F0CBD6E-0F41-4897-9D18-D7C78B775622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RhombusOfStars", "rhombusOfStars\RhombusOfStars.csproj", "{2F0CBD6E-0F41-4897-9D18-D7C78B775622}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeEnum", "PracticeEnum\PracticeEnum.csproj", "{699C79B9-3C7F-4BEF-90C1-701C4D01AE2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeEnum", "PracticeEnum\PracticeEnum.csproj", "{699C79B9-3C7F-4BEF-90C1-701C4D01AE2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointInRectangle", "PointInRectangle\PointInRectangle.csproj", "{618BD81F-BFBC-47B1-9513-5AE2C3FA59BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PointInRectangle", "PointInRectangle\PointInRectangle.csproj", "{618BD81F-BFBC-47B1-9513-5AE2C3FA59BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation", "HotelReservation\HotelReservation.csproj", "{22DD948E-F0AD-41E5-BEC2-83B77D962E17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation", "HotelReservation\HotelReservation.csproj", "{22DD948E-F0AD-41E5-BEC2-83B77D962E17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithAbstractionEXERCISE", "WorkingWithAbstractionEXERCISE", "{CDFA71DB-909F-4094-A3FB-D4157279D011}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawData", "P01_RawData\RawData.csproj", "{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{22DD948E-F0AD-41E5-BEC2-83B77D962E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22DD948E-F0AD-41E5-BEC2-83B77D962E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22DD948E-F0AD-41E5-BEC2-83B77D962E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{2F0CBD6E-0F41-4897-9D18-D7C78B775622} = {3D8FD08E-DFFE-47C3-AA89-B7996416A2F6}
 		{618BD81F-BFBC-47B1-9513-5AE2C3FA59BE} = {3D8FD08E-DFFE-47C3-AA89-B7996416A2F6}
 		{22DD948E-F0AD-41E5-BEC2-83B77D962E17} = {3D8FD08E-DFFE-47C3-AA89-B7996416A2F6}
+		{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B} = {CDFA71DB-909F-4094-A3FB-D4157279D011}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F0F9293-FEC7-40CF-A50A-53988D9F54FD}

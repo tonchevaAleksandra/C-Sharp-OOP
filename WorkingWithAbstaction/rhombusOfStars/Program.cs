@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace rhombusOfStars
+namespace RhombusOfStars
 {
     class Program
     {
