@@ -3,7 +3,7 @@ namespace HotelReservation
 {
     public enum Discount
     {
-        None = 0,
+        None,
         SecondVisit = 10,
         VIP = 20
 
