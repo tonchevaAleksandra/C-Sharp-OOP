@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawData", "P01_RawData\RawD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsSalesman", "CarsSalesman\CarsSalesman.csproj", "{07E30926-A97F-4BAF-A6E6-BE9B79F9053F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JediGalaxy", "JediGalaxy\JediGalaxy.csproj", "{439727C4-69D4-4DC4-A1C4-5B8899C5E6C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{07E30926-A97F-4BAF-A6E6-BE9B79F9053F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07E30926-A97F-4BAF-A6E6-BE9B79F9053F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07E30926-A97F-4BAF-A6E6-BE9B79F9053F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439727C4-69D4-4DC4-A1C4-5B8899C5E6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439727C4-69D4-4DC4-A1C4-5B8899C5E6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439727C4-69D4-4DC4-A1C4-5B8899C5E6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439727C4-69D4-4DC4-A1C4-5B8899C5E6C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{22DD948E-F0AD-41E5-BEC2-83B77D962E17} = {3D8FD08E-DFFE-47C3-AA89-B7996416A2F6}
 		{DD281AD2-D7B1-423A-8FEE-BF0E51393A8B} = {CDFA71DB-909F-4094-A3FB-D4157279D011}
 		{07E30926-A97F-4BAF-A6E6-BE9B79F9053F} = {CDFA71DB-909F-4094-A3FB-D4157279D011}
+		{439727C4-69D4-4DC4-A1C4-5B8899C5E6C0} = {CDFA71DB-909F-4094-A3FB-D4157279D011}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F0F9293-FEC7-40CF-A50A-53988D9F54FD}
