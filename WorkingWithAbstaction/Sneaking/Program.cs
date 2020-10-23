@@ -1,155 +1,173 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO.MemoryMappedFiles;
+using System.Linq;
 
-namespace P06_Sneaking
+namespace Sneaking
 {
-    class Sneaking
+    public class Sneaking
     {
-        static char[][] room;
+        public static char[][] matrix;
         static void Main()
         {
             int n = int.Parse(Console.ReadLine());
-            room = new char[n][];
+            matrix = new char[n][];
 
-            for (int row = 0; row < n; row++)
-            {
-                var input = Console.ReadLine().ToCharArray();
-                room[row] = new char[input.Length];
-                for (int col = 0; col < input.Length; col++)
-                {
-                    room[row][col] = input[col];
-                }
-            }
+            FillTheMatrix(n);
 
-            var moves = Console.ReadLine().ToCharArray();
-            int[] samPosition = new int[2];
-            for (int row = 0; row < room.Length; row++)
-            {
-                for (int col = 0; col < room[row].Length; col++)
-                {
-                    if (room[row][col] == 'S')
-                    {
-                        samPosition[0] = row;
-                        samPosition[1] = col;
-                    }
-                }
-            }
+            char[] moves = Console.ReadLine().ToCharArray();
+            int[] nikolazPosition = new int[2];
+            List<Enemy> enemies = new List<Enemy>();
+            Sam sam = new Sam(0, 0);
+            FindPositionsOfPlayers(enemies, sam,  nikolazPosition);
+
             for (int i = 0; i < moves.Length; i++)
             {
-                for (int row = 0; row < room.Length; row++)
-                {
-                    for (int col = 0; col < room[row].Length; col++)
-                    {
-                        if (room[row][col] == 'b')
-                        {
-                            if (row >= 0 && row < room.Length && col + 1 >= 0 && col + 1 < room[row].Length)
-                            {
-                                room[row][col] = '.';
-                                room[row][col + 1] = 'b';
-                                col++;
-                            }
-                            else
-                            {
-                                room[row][col] = 'd';
-                            }
-                        }
-                        else if (room[row][col] == 'd')
-                        {
-                            if (row >= 0 && row < room.Length && col - 1 >= 0 && col - 1 < room[row].Length)
-                            {
-                                room[row][col] = '.';
-                                room[row][col - 1] = 'd';
-                            }
-                            else
-                            {
-                                room[row][col] = 'b';
-                            }
-                        }
-                    }
-                }
 
-                int[] getEnemy = new int[2];
-                for (int j = 0; j < room[samPosition[0]].Length; j++)
+                MoveEnemies(enemies);
+                if(IsSamDied(enemies, sam))
                 {
-                    if (room[samPosition[0]][j] != '.' && room[samPosition[0]][j] != 'S')
-                    {
-                        getEnemy[0] = samPosition[0];
-                        getEnemy[1] = j;
-                    }
+                    matrix[sam.Row][sam.Col] = 'X';
+                    break;
                 }
-                if (samPosition[1] < getEnemy[1] && room[getEnemy[0]][getEnemy[1]] == 'd' && getEnemy[0] == samPosition[0])
+                MoveSam(moves[i], sam);
+                if (IsSamDied(enemies, sam))
                 {
-                    room[samPosition[0]][samPosition[1]] = 'X';
-                    Console.WriteLine($"Sam died at {samPosition[0]}, {samPosition[1]}");
-                    for (int row = 0; row < room.Length; row++)
-                    {
-                        for (int col = 0; col < room[row].Length; col++)
-                        {
-                            Console.Write(room[row][col]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Environment.Exit(0);
+                    matrix[sam.Row][sam.Col] = 'X';
+                    break;
                 }
-                else if (getEnemy[1] < samPosition[1] && room[getEnemy[0]][getEnemy[1]] == 'b' && getEnemy[0] == samPosition[0])
+                if (enemies.Any(e => e.Row == sam.Row && e.Col == sam.Col))
                 {
-                    room[samPosition[0]][samPosition[1]] = 'X';
-                    Console.WriteLine($"Sam died at {samPosition[0]}, {samPosition[1]}");
-                    for (int row = 0; row < room.Length; row++)
-                    {
-                        for (int col = 0; col < room[row].Length; col++)
-                        {
-                            Console.Write(room[row][col]);
-                        }
-                        Console.WriteLine();
-                    }
-                    Environment.Exit(0);
-                }
+                    Enemy currentEnemy = enemies.FirstOrDefault(e => e.Row == sam.Row && e.Col == sam.Col);
+                    matrix[currentEnemy.Row][currentEnemy.Col] = sam.Character;
+                    enemies.Remove(currentEnemy);
 
-
-                room[samPosition[0]][samPosition[1]] = '.';
-                switch (moves[i])
-                {
-                    case 'U':
-                        samPosition[0]--;
-                        break;
-                    case 'D':
-                        samPosition[0]++;
-                        break;
-                    case 'L':
-                        samPosition[1]--;
-                        break;
-                    case 'R':
-                        samPosition[1]++;
-                        break;
-                    default:
-                        break;
                 }
-                room[samPosition[0]][samPosition[1]] = 'S';
-
-                for (int j = 0; j < room[samPosition[0]].Length; j++)
+                else if (sam.Row == nikolazPosition[0])
                 {
-                    if (room[samPosition[0]][j] != '.' && room[samPosition[0]][j] != 'S')
-                    {
-                        getEnemy[0] = samPosition[0];
-                        getEnemy[1] = j;
-                    }
+                    Console.WriteLine($"Nikoladze killed!");
+                    matrix[sam.Row][sam.Col] = sam.Character;
+                    matrix[nikolazPosition[0]][nikolazPosition[1]] = 'X';
+                    break;
                 }
-                if (room[getEnemy[0]][getEnemy[1]] == 'N' && samPosition[0] == getEnemy[0])
+                else
+                    matrix[sam.Row][sam.Col] = sam.Character;
+                continue;
+
+            }
+            PrintMatrixFinalState();
+        }
+
+        private static void PrintMatrixFinalState()
+        {
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                for (int j = 0; j < matrix[i].Length; j++)
                 {
-                    room[getEnemy[0]][getEnemy[1]] = 'X';
-                    Console.WriteLine("Nikoladze killed!");
-                    for (int row = 0; row < room.Length; row++)
+                    Console.Write(matrix[i][j]);
+                }
+                Console.WriteLine();
+            }
+        }
+        private static bool IsSamDied(List<Enemy> enemies, Sam sam)
+        {
+            if (enemies.Any(e => e.Row == sam.Row))
+            {
+                Enemy currentEnemy = enemies.FirstOrDefault(e => e.Row == sam.Row);
+                if (currentEnemy.Character == 'b' && sam.Col > currentEnemy.Col ||
+                    currentEnemy.Character == 'd' && sam.Col < currentEnemy.Col)
+                {
+                    Console.WriteLine($"Sam died at {sam.Row}, {sam.Col}");
+                    matrix[sam.Row][sam.Col] = 'X';
+                    return true;
+                }
+            }
+            return false;
+        }
+        private static void MoveSam(char movement, Sam sam)
+        {
+            matrix[sam.Row][sam.Col] = '.';
+            switch (movement)
+            {
+                case 'U':
+                    sam.Row--;
+                    break;
+                case 'D':
+                    sam.Row++;
+                    break;
+                case 'L':
+                    sam.Col--;
+                    break;
+                case 'R':
+                    sam.Col++;
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        private static void MoveEnemies(List<Enemy> enemies)
+        {
+            foreach (Enemy enemy in enemies)
+            {
+                matrix[enemy.Row][enemy.Col] = '.';
+                enemy.Move();
+                if (!CheckValidityOfCell(enemy.Row, enemy.Col))
+                {
+                    enemy.ChangeCharacter();
+                    if (enemy.Character == 'b')
+                        enemy.Col = 0;
+                    else
+                        enemy.Col = matrix.Length - 1;
+
+                }
+                matrix[enemy.Row][enemy.Col] = enemy.Character;
+            }
+        }
+        private static bool CheckValidityOfCell(int row, int col)
+        {
+            if (row >= 0 && row < matrix.Length && col >= 0 && col < matrix[row].Length) return true;
+            return false;
+        }
+        private static void FindPositionsOfPlayers(List<Enemy> enemies, Sam sam, int[] nikolazPosition)
+        {
+            for (int row = 0; row < matrix.Length; row++)
+            {
+                for (int col = 0; col < matrix[row].Length; col++)
+                {
+                    if (matrix[row][col] == 'S')
                     {
-                        for (int col = 0; col < room[row].Length; col++)
-                        {
-                            Console.Write(room[row][col]);
-                        }
-                        Console.WriteLine();
+                        sam.Row = row;
+                        sam.Col = col;
                     }
-                    Environment.Exit(0);
+                    else if (matrix[row][col] == 'b')
+                    {
+                        enemies.Add(new Enemy(row, col, 'b', "right"));
+                    }
+                    else if (matrix[row][col] == 'd')
+                    {
+                        enemies.Add(new Enemy(row, col, 'd', "left"));
+                    }
+                    else if(matrix[row][col]=='N')
+                    {
+                        nikolazPosition[0] = row;
+                        nikolazPosition[1] = col;
+                    }
                 }
             }
         }
 
+        private static void FillTheMatrix(int n)
+        {
+            for (int row = 0; row < n; row++)
+            {
+                var input = Console.ReadLine().ToCharArray();
+                matrix[row] = new char[input.Length];
+                for (int col = 0; col < input.Length; col++)
+                {
+                    matrix[row][col] = input[col];
+                }
+            }
+        }
     }
 }
