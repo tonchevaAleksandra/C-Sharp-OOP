@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleInheritance", "Single
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleInheritance", "MultipleInheritance\MultipleInheritance.csproj", "{843E3FD3-1A13-456B-8DB1-60E078431B81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HierarchicalInheritance", "HierarchicalInheritance\HierarchicalInheritance.csproj", "{7D13EA5A-47B1-4A3B-AC5E-3E363B1E7254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomList", "RandomList\RandomList.csproj", "{1CD3CE87-7671-4007-BCA0-F7819FDA0912}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{843E3FD3-1A13-456B-8DB1-60E078431B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{843E3FD3-1A13-456B-8DB1-60E078431B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{843E3FD3-1A13-456B-8DB1-60E078431B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D13EA5A-47B1-4A3B-AC5E-3E363B1E7254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D13EA5A-47B1-4A3B-AC5E-3E363B1E7254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D13EA5A-47B1-4A3B-AC5E-3E363B1E7254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D13EA5A-47B1-4A3B-AC5E-3E363B1E7254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD3CE87-7671-4007-BCA0-F7819FDA0912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD3CE87-7671-4007-BCA0-F7819FDA0912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD3CE87-7671-4007-BCA0-F7819FDA0912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD3CE87-7671-4007-BCA0-F7819FDA0912}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8B1F9233-A876-4790-A1B5-63B9FDDDDCC7} = {E467C593-2555-47EB-A995-9AC68CD232CE}
 		{843E3FD3-1A13-456B-8DB1-60E078431B81} = {E467C593-2555-47EB-A995-9AC68CD232CE}
+		{7D13EA5A-47B1-4A3B-AC5E-3E363B1E7254} = {E467C593-2555-47EB-A995-9AC68CD232CE}
+		{1CD3CE87-7671-4007-BCA0-F7819FDA0912} = {E467C593-2555-47EB-A995-9AC68CD232CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1EB0C173-FD6F-4FFA-9857-C9CCA0340DD6}
