@@ -20,4 +20,8 @@ Public virtual Method/property/ in a base class - every child classes cam overri
 
 Extended class  have to be static with static methods
 
+The Abstract class is a class that can not be initialize /like Animal/ 
+- in the abstract class we can write an abstract methods /they return nothing, 
+but they can be used to override it in the child classes
+
 
