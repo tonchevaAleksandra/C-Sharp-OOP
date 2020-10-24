@@ -1,7 +1,7 @@
 ﻿
 namespace Practice
 {
-   public class Person
+   public class Person:IMovableObject, IPerson
     {
         private int age;
         public string Name { get; set; }
@@ -10,6 +10,14 @@ namespace Practice
         {
             get => this.age;
             set => this.age = value;
+        }
+        public void Move()
+        {
+
+        }
+        public virtual string SayHello()
+        {
+            return $"Hello from {this.Name}!";
         }
     }
 }

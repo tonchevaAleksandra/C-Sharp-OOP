@@ -4,8 +4,11 @@ using System.Text;
 
 namespace Practice
 {
-   public interface IPerson
+   public interface IMovableObject
     {
+        public void Move()
+        {
 
+        }
     }
 }
