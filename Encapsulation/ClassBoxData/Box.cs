@@ -7,7 +7,7 @@ namespace ClassBoxData
 {
     public class Box
     {
-        private const double MinSide = 1;
+        private const double MinSide = 0;
         private double length;
         private double width;
         private double height;
@@ -68,7 +68,7 @@ namespace ClassBoxData
         }
         private static void ValidateSide(double parameter, string property)
         {
-            if (parameter < MinSide)
+            if (parameter <= MinSide)
             {
                 throw new ArgumentException($"{property} cannot be zero or negative.");
             }
