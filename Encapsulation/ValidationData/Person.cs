@@ -19,31 +19,21 @@ namespace PersonsInfo
         }
         public string FirstName
         {
-            get
-            {
-                return this.firstName;
-            }
+            get =>this.firstName;
+            
             private set
             {
-                if(value.Length<3)
-                {
-                    throw new ArgumentException("First name cannot contain fewer than 3 symbols!");
-                }
+                NameValidator.ValidateName(value);
                 this.firstName = value;
             }
         }
         public string LastName
         {
-            get
-            {
-                return this.lastName;
-            }
+            get=>this.lastName;
+            
             private set
             {
-                if(value.Length<3)
-                {
-                    throw new ArgumentException("Last name cannot contain fewer than 3 symbols!");
-                }
+                NameValidator.ValidateName(value);
                 this.lastName = value;
             }
         }
