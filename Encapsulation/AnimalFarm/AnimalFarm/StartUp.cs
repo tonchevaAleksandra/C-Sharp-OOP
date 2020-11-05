@@ -18,7 +18,7 @@
                     chicken.Age,
                     chicken.ProductPerDay);
             }
-            catch (Exception msg)
+            catch (ArgumentException msg)
             {
 
                 Console.WriteLine(msg.Message);

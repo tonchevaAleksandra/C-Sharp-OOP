@@ -27,7 +27,7 @@ namespace AnimalFarm.Models
             {
                 if(String.IsNullOrWhiteSpace(value) || String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Name cannot be empty.");
+                    throw new ArgumentException("Name cannot be empty.");
                 }
                 this.name = value;
             }
@@ -83,7 +83,7 @@ namespace AnimalFarm.Models
         {
             if (age < MinAge || age > MaxAge)
             {
-                throw new ArgumentException("Age should be between 0 and 15.");
+                throw new ArgumentException($"Age should be between {MinAge} and {MaxAge}.");
             }
         }
     }
