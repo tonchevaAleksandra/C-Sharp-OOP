@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfacesAndAbstractionLAB", "InterfacesAndAbstractionLAB", "{FA2889AD-3442-4CCE-A021-FA9EC63E2EA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{BEAEF372-2CDF-454C-BC28-7E80144E8C64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEAEF372-2CDF-454C-BC28-7E80144E8C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAEF372-2CDF-454C-BC28-7E80144E8C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAEF372-2CDF-454C-BC28-7E80144E8C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAEF372-2CDF-454C-BC28-7E80144E8C64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929} = {FA2889AD-3442-4CCE-A021-FA9EC63E2EA7}
+		{BEAEF372-2CDF-454C-BC28-7E80144E8C64} = {FA2889AD-3442-4CCE-A021-FA9EC63E2EA7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A37A554D-961C-419C-8168-3689F6019E67}
+	EndGlobalSection
+EndGlobal
