@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonInfo", "PersonInfo\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleImplementation", "MultipleImplementation\MultipleImplementation.csproj", "{6269961B-5923-41B9-8F00-9D4804473330}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telephony", "Telephony\Telephony.csproj", "{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{6269961B-5923-41B9-8F00-9D4804473330}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6269961B-5923-41B9-8F00-9D4804473330}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6269961B-5923-41B9-8F00-9D4804473330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{CB9895C2-21E2-46FA-8A1A-C084BD41F245} = {FA2889AD-3442-4CCE-A021-FA9EC63E2EA7}
 		{32BDFEA1-34CC-4173-B6E7-2EC9F272F20F} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{6269961B-5923-41B9-8F00-9D4804473330} = {5C3878C8-E49A-4287-A510-401CA63C6283}
+		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A37A554D-961C-419C-8168-3689F6019E67}
