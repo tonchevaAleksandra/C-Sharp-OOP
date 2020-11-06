@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassBoxData", "ClassBoxDat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalFarm", "AnimalFarm\AnimalFarm\AnimalFarm.csproj", "{27D53668-5FEB-4F86-B8E2-0E79B42DDE93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingSpree", "ShoppingSpree\ShoppingSpree.csproj", "{508530CA-1636-48F5-9D3E-3C7AAC85EDD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingSpree", "ShoppingSpree\ShoppingSpree.csproj", "{508530CA-1636-48F5-9D3E-3C7AAC85EDD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaCalories", "PizzaCalories\PizzaCalories.csproj", "{58E45BAD-015E-43A1-B935-19B56E018630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaCalories", "PizzaCalories\PizzaCalories.csproj", "{58E45BAD-015E-43A1-B935-19B56E018630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballTeamGenerator", "FootballTeamGenerator\FootballTeamGenerator.csproj", "{1341FAFE-0EC7-45C7-8645-E457928F0E5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{58E45BAD-015E-43A1-B935-19B56E018630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E45BAD-015E-43A1-B935-19B56E018630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E45BAD-015E-43A1-B935-19B56E018630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1341FAFE-0EC7-45C7-8645-E457928F0E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1341FAFE-0EC7-45C7-8645-E457928F0E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1341FAFE-0EC7-45C7-8645-E457928F0E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1341FAFE-0EC7-45C7-8645-E457928F0E5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{27D53668-5FEB-4F86-B8E2-0E79B42DDE93} = {119A3D75-60F7-4BA2-AB34-25EA84E713A5}
 		{508530CA-1636-48F5-9D3E-3C7AAC85EDD1} = {119A3D75-60F7-4BA2-AB34-25EA84E713A5}
 		{58E45BAD-015E-43A1-B935-19B56E018630} = {119A3D75-60F7-4BA2-AB34-25EA84E713A5}
+		{1341FAFE-0EC7-45C7-8645-E457928F0E5E} = {119A3D75-60F7-4BA2-AB34-25EA84E713A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05D1E710-B0C3-428A-9139-3BA64D3A7297}
