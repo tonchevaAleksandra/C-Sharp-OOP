@@ -5,19 +5,23 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfacesAndAbstractionLAB", "InterfacesAndAbstractionLAB", "{FA2889AD-3442-4CCE-A021-FA9EC63E2EA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice", "Practice\Practice.csproj", "{D4D6282E-FA64-4359-8B8C-CFFAE0C2C929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{BEAEF372-2CDF-454C-BC28-7E80144E8C64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "Shapes\Shapes.csproj", "{BEAEF372-2CDF-454C-BC28-7E80144E8C64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars", "Cars\Cars.csproj", "{CB9895C2-21E2-46FA-8A1A-C084BD41F245}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars", "Cars\Cars.csproj", "{CB9895C2-21E2-46FA-8A1A-C084BD41F245}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfacesAndAbstractionEXERCICE", "InterfacesAndAbstractionEXERCICE", "{5C3878C8-E49A-4287-A510-401CA63C6283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonInfo", "PersonInfo\PersonInfo.csproj", "{32BDFEA1-34CC-4173-B6E7-2EC9F272F20F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonInfo", "PersonInfo\PersonInfo.csproj", "{32BDFEA1-34CC-4173-B6E7-2EC9F272F20F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleImplementation", "MultipleImplementation\MultipleImplementation.csproj", "{6269961B-5923-41B9-8F00-9D4804473330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleImplementation", "MultipleImplementation\MultipleImplementation.csproj", "{6269961B-5923-41B9-8F00-9D4804473330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telephony", "Telephony\Telephony.csproj", "{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telephony", "Telephony\Telephony.csproj", "{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderControl", "BorderControl\BorderControl.csproj", "{4091646B-C381-462A-9225-90C51C6EC78A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayCelebrations", "BirthdayCelebrations\BirthdayCelebrations.csproj", "{DDD00F81-C726-413F-821F-0A87D65E333E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4091646B-C381-462A-9225-90C51C6EC78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4091646B-C381-462A-9225-90C51C6EC78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4091646B-C381-462A-9225-90C51C6EC78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4091646B-C381-462A-9225-90C51C6EC78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD00F81-C726-413F-821F-0A87D65E333E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD00F81-C726-413F-821F-0A87D65E333E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD00F81-C726-413F-821F-0A87D65E333E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD00F81-C726-413F-821F-0A87D65E333E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,8 @@ Global
 		{32BDFEA1-34CC-4173-B6E7-2EC9F272F20F} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{6269961B-5923-41B9-8F00-9D4804473330} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{BA41A4FA-B663-47B1-999D-A8165BC7EBA9} = {5C3878C8-E49A-4287-A510-401CA63C6283}
+		{4091646B-C381-462A-9225-90C51C6EC78A} = {5C3878C8-E49A-4287-A510-401CA63C6283}
+		{DDD00F81-C726-413F-821F-0A87D65E333E} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A37A554D-961C-419C-8168-3689F6019E67}
