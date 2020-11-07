@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayCelebrations", "Bir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodShortage", "FoodShortage\FoodShortage.csproj", "{10DEC14B-E274-43B2-847D-A89FCF25C913}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryElite", "MilitaryElite\MilitaryElite.csproj", "{9641907B-2A7D-42E7-8817-7E3583BD805E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{10DEC14B-E274-43B2-847D-A89FCF25C913}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10DEC14B-E274-43B2-847D-A89FCF25C913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10DEC14B-E274-43B2-847D-A89FCF25C913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9641907B-2A7D-42E7-8817-7E3583BD805E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9641907B-2A7D-42E7-8817-7E3583BD805E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9641907B-2A7D-42E7-8817-7E3583BD805E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9641907B-2A7D-42E7-8817-7E3583BD805E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{4091646B-C381-462A-9225-90C51C6EC78A} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{DDD00F81-C726-413F-821F-0A87D65E333E} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{10DEC14B-E274-43B2-847D-A89FCF25C913} = {5C3878C8-E49A-4287-A510-401CA63C6283}
+		{9641907B-2A7D-42E7-8817-7E3583BD805E} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A37A554D-961C-419C-8168-3689F6019E67}
