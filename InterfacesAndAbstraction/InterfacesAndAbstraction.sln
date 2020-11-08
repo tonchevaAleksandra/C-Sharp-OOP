@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodShortage", "FoodShortag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilitaryElite", "MilitaryElite\MilitaryElite.csproj", "{9641907B-2A7D-42E7-8817-7E3583BD805E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionHierarchy", "CollectionHierarchy\CollectionHierarchy.csproj", "{11F9CC4F-F42C-44CB-A955-9F6C66DA3176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionHierarchy", "CollectionHierarchy\CollectionHierarchy.csproj", "{11F9CC4F-F42C-44CB-A955-9F6C66DA3176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitInterfaces", "ExplicitInterfaces\ExplicitInterfaces.csproj", "{A4FA4001-F391-4FE7-8F06-B3C7DD81007A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{11F9CC4F-F42C-44CB-A955-9F6C66DA3176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F9CC4F-F42C-44CB-A955-9F6C66DA3176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F9CC4F-F42C-44CB-A955-9F6C66DA3176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4FA4001-F391-4FE7-8F06-B3C7DD81007A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FA4001-F391-4FE7-8F06-B3C7DD81007A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FA4001-F391-4FE7-8F06-B3C7DD81007A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FA4001-F391-4FE7-8F06-B3C7DD81007A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{10DEC14B-E274-43B2-847D-A89FCF25C913} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{9641907B-2A7D-42E7-8817-7E3583BD805E} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 		{11F9CC4F-F42C-44CB-A955-9F6C66DA3176} = {5C3878C8-E49A-4287-A510-401CA63C6283}
+		{A4FA4001-F391-4FE7-8F06-B3C7DD81007A} = {5C3878C8-E49A-4287-A510-401CA63C6283}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A37A554D-961C-419C-8168-3689F6019E67}
