@@ -15,7 +15,7 @@ namespace Vehicles.Models
 
         public override string Drive(double distance)
         {
-            double fuelNeeded = distance * this.FuelConsumption* INCR_CNSMPT_FULL_BUS;
+            double fuelNeeded = distance * (this.FuelConsumption+INCR_CNSMPT_FULL_BUS);
 
             if (this.FuelQuantity < fuelNeeded)
             {
