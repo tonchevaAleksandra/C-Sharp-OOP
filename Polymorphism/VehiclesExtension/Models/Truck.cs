@@ -7,7 +7,7 @@ namespace Vehicles.Models
     public class Truck : Vehicle
     {
         private const double INCR_CNSMPT = 1.6;
-        private const double FUEL_LEAK = 0.95;
+        private const double FUEL_LEAK = 0.05;
 
         public Truck(double fuelQuantity, double fuelConsumption, double tankCapacity) 
             : base(fuelQuantity, fuelConsumption, tankCapacity)
