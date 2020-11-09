@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclesExtension", "Vehicl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiding", "Raiding\Raiding.csproj", "{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildFarm", "WildFarm\WildFarm.csproj", "{5C36C1FC-5884-4606-ABAE-D18630943381}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C36C1FC-5884-4606-ABAE-D18630943381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C36C1FC-5884-4606-ABAE-D18630943381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C36C1FC-5884-4606-ABAE-D18630943381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C36C1FC-5884-4606-ABAE-D18630943381}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{8FD9889D-5109-469D-88EB-3071D93D0BC3} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
 		{1B9AB84F-6DE3-4C68-9C66-4596CED26C97} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
 		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
+		{5C36C1FC-5884-4606-ABAE-D18630943381} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B2E0F5E-5642-43CD-8705-CE2DA9582A51}
