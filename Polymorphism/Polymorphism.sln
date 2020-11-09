@@ -5,19 +5,21 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PolymorphismLAB", "PolymorphismLAB", "{E4D0BF70-169C-4202-A62B-B5B04E5D1661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{84138BE9-990E-405C-8A8D-6ADF8E7884A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice", "Practice\Practice.csproj", "{84138BE9-990E-405C-8A8D-6ADF8E7884A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathOperation", "MathOperation\MathOperation.csproj", "{A69ACF6E-E8DE-4EB9-84E4-35DBF2D3E097}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathOperation", "MathOperation\MathOperation.csproj", "{A69ACF6E-E8DE-4EB9-84E4-35DBF2D3E097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{431E0D39-3C61-4F02-88B1-04C8D2BD63F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "Animals\Animals.csproj", "{431E0D39-3C61-4F02-88B1-04C8D2BD63F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{FC015B60-95D0-45D8-AE99-3200C4DF9B1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "Shapes\Shapes.csproj", "{FC015B60-95D0-45D8-AE99-3200C4DF9B1D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PolymorphismEXERCISE", "PolymorphismEXERCISE", "{43117B8F-96D7-4780-A4BC-4E0515F7B290}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicles", "Vehicles\Vehicles.csproj", "{8FD9889D-5109-469D-88EB-3071D93D0BC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vehicles", "Vehicles\Vehicles.csproj", "{8FD9889D-5109-469D-88EB-3071D93D0BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehiclesExtension", "VehiclesExtension\VehiclesExtension.csproj", "{1B9AB84F-6DE3-4C68-9C66-4596CED26C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclesExtension", "VehiclesExtension\VehiclesExtension.csproj", "{1B9AB84F-6DE3-4C68-9C66-4596CED26C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raiding", "Raiding\Raiding.csproj", "{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{1B9AB84F-6DE3-4C68-9C66-4596CED26C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B9AB84F-6DE3-4C68-9C66-4596CED26C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B9AB84F-6DE3-4C68-9C66-4596CED26C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{FC015B60-95D0-45D8-AE99-3200C4DF9B1D} = {E4D0BF70-169C-4202-A62B-B5B04E5D1661}
 		{8FD9889D-5109-469D-88EB-3071D93D0BC3} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
 		{1B9AB84F-6DE3-4C68-9C66-4596CED26C97} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
+		{DC7D6D51-0A6C-4AA9-87C6-6BC1F5DD6DE5} = {43117B8F-96D7-4780-A4BC-4E0515F7B290}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B2E0F5E-5642-43CD-8705-CE2DA9582A51}
