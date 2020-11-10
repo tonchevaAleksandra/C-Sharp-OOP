@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixingVol2", "FixingVol2\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertToDouble", "ConvertToDouble\ConvertToDouble.csproj", "{F5700E0B-4D7E-49CD-A9BA-089D54D6A3B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidPerson", "ValidPerson\ValidPerson.csproj", "{EA92DDCA-B92B-495C-B083-9E07F1FC5B6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F5700E0B-4D7E-49CD-A9BA-089D54D6A3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5700E0B-4D7E-49CD-A9BA-089D54D6A3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5700E0B-4D7E-49CD-A9BA-089D54D6A3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA92DDCA-B92B-495C-B083-9E07F1FC5B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA92DDCA-B92B-495C-B083-9E07F1FC5B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA92DDCA-B92B-495C-B083-9E07F1FC5B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA92DDCA-B92B-495C-B083-9E07F1FC5B6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
