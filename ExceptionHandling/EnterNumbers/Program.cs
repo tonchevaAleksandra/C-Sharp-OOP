@@ -18,10 +18,9 @@ namespace EnterNumbers
             }
         }
         /// <summary>
-        /// End can be end + (10-i) < 100
         /// </summary>
         /// <param name="start"></param>
-        /// <param name="end"></param>
+        /// <param name="end"> End can be end + (10-i) < 100</param>
         /// <returns></returns>
         private static int ReadNumbers(int start, int end)
         {
