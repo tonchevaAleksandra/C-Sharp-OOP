@@ -8,7 +8,7 @@ namespace EnterNumbers
         {
 
             int start = 1;
-            int end = 91;
+            int end = 90;
         
             for (int i = 0; i < 10; i++)
             {              
@@ -18,7 +18,7 @@ namespace EnterNumbers
             }
         }
         /// <summary>
-        /// End can be end + i=100
+        /// End can be end + i<100
         /// </summary>
         /// <param name="start"></param>
         /// <param name="end"></param>
