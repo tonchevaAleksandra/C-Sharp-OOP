@@ -19,9 +19,9 @@
             get { return this.Width * this.Height; }
         }
 
-        public void Draw(IRenderer render, IDrawingContext context)
-        {
-            render.Render(context, this);
-        }
+        //public void Draw(IRenderer render, IDrawingContext context)
+        //{
+        //    render.Render(context, this);
+        //}
     }
 }
