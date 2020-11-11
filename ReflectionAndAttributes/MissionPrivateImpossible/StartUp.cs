@@ -2,11 +2,12 @@
 
 namespace MissionPrivateImpossible
 {
-    class Program
+   public class StartUp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Spy spy = new Spy();
+            Console.WriteLine(spy.RevealPrivateMethods("Hacker"));
         }
     }
 }
