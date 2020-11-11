@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stealer", "Stealer\Stealer.csproj", "{23DDC737-3A58-4FB3-9D4C-9A76123AEB38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HightQualityMistakes", "HightQualityMistakes\HightQualityMistakes.csproj", "{C353E096-E46F-41BD-8238-451DC3227955}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{23DDC737-3A58-4FB3-9D4C-9A76123AEB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23DDC737-3A58-4FB3-9D4C-9A76123AEB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23DDC737-3A58-4FB3-9D4C-9A76123AEB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C353E096-E46F-41BD-8238-451DC3227955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C353E096-E46F-41BD-8238-451DC3227955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C353E096-E46F-41BD-8238-451DC3227955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C353E096-E46F-41BD-8238-451DC3227955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{23DDC737-3A58-4FB3-9D4C-9A76123AEB38} = {1B46A081-E128-43E2-87D7-68EAAADC20EA}
+		{C353E096-E46F-41BD-8238-451DC3227955} = {1B46A081-E128-43E2-87D7-68EAAADC20EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31FB6B3F-4761-4724-AB2A-D70077080580}
