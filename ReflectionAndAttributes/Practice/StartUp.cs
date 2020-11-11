@@ -39,15 +39,15 @@ namespace Practice
             }
             Console.WriteLine();
             ///
-            
-           var anotherCat= (Cat)Activator.CreateInstance(type, "Pesho", 2 );
+
+            var anotherCat = (Cat)Activator.CreateInstance(type, "Pesho", 2);
             Console.WriteLine(anotherCat.Name);
             Console.WriteLine("///");
             Console.Write("Animal type: ");
             var animalType = Console.ReadLine();
             var typeA = Type.GetType($"{baseNamespace}.{animalType}");
 
-            if(typeA==null)
+            if (typeA == null)
             {
                 Console.WriteLine("Invalid animal!");
                 return;
@@ -56,7 +56,7 @@ namespace Practice
             var animalName = Console.ReadLine();
             Console.Write("Animal age: ");
             var animalAge = int.Parse(Console.ReadLine());
-            var animalCreated = (Animal)Activator.CreateInstance(typeA,new object[] { animalName, animalAge });
+            var animalCreated = (Animal)Activator.CreateInstance(typeA, new object[] { animalName, animalAge });
             Console.WriteLine(animalCreated.GetType());
 
             Console.WriteLine("////////////////////////////");
@@ -77,14 +77,50 @@ namespace Practice
 
             foreach (var parameterInfo in parameters)
             {
-                Console.Write($"Animal {parameterInfo.Name}: ");
-                var value = Console.ReadLine();
+                while (true)
+                {
+                    try
+                    {
+                        Console.Write($"Animal {parameterInfo.Name}: ");
+                        var value = Console.ReadLine();
+                        var parameterType = parameterInfo.ParameterType;
+                        var castValue = Convert.ChangeType(value, parameterType);
+                        values.Add(castValue);
+                        break;
+                    }
+                    catch 
+                    {
+                        Console.WriteLine($"Invalid {parameterInfo.ParameterType.Name} value!");
+                        throw;
+                    } 
+                }
 
-                values.Add(value);
+              
             }
 
             var animal = (Animal)Activator.CreateInstance(typeB, values.ToArray());
-            Console.WriteLine(animal.Name);
+            Console.WriteLine($"You cteated a {animal.GetType().Name} with yje name {animal.Name}");
+
+            Console.WriteLine("////");
+            // to access to specified constructor woth given types
+            var constructor = typeof(Cat).GetConstructor(new Type[] { typeof(string), typeof(int) });
+            var cat3 = (Cat)constructor.Invoke(new object[] { "Ivan", 5 });
+
+            //////
+            ///MyClass master= new MyClass();  
+            //master.GetType().GetMethod("HelloWorld").Invoke(objMyClass, null);
+            //var method = typeof(Cat).GetMethod("Move");
+            var cat4 = new Cat("Ivan",4);
+            //method.Invoke(cat4, new object[0]);
+
+            var method1 = typeof(Cat).GetMethod("Move", new[] {typeof(int), typeof(int) });
+            method1.Invoke(cat4, new object[] { 2, 3 });
+
+            var method2 = typeof(Cat).GetMethod("SomeStaticMethod");
+            method2.Invoke(null, new object[0]);
+            Console.WriteLine(method2.ReturnType);
+            Console.WriteLine(method1.ReturnParameter);
+            Console.WriteLine(method1.GetParameters());
         }
     }
 }
