@@ -1,7 +1,7 @@
 ﻿using System;
 
-
-
+namespace CreateAttribute
+{
     [Author("Ventsi")]
     class StartUp
     {
@@ -10,4 +10,4 @@
         { 
         }
     }
-
+}
