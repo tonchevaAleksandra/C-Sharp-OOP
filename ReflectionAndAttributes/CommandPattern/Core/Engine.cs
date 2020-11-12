@@ -20,7 +20,8 @@ namespace CommandPattern.Core
                 try
                 {
                     string result = this.commandInterpreter.Read(args);
-                    Console.WriteLine(result);
+                    Console.WriteLine(result
+                        );
                 }
                 catch (ArgumentException ae)
                 {
