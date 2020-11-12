@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AuthorProblem
+namespace Collector
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true)]
     public class AuthorAttribute : Attribute

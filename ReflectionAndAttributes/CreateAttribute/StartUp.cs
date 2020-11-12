@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace CreateAttribute
+namespace AuthorProblem
 {
     [Author("Ventsi")]
-    class StartUp
+  public class StartUp
     {
         [Author("Gosho")]
         static void Main(string[] args)
