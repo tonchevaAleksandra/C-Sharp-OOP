@@ -12,9 +12,11 @@ namespace TestNUnit.Tests
         [Test]
         public void SumShouldReturnCorrectResultWithTwoNumbers()
         {
+            //Arrange
             var calculator = new Calculator();
+            //Act
             var result = calculator.CalculateSum(1, 2);
-
+            //Assert
             Assert.That(result, Is.EqualTo(3));
 
         }

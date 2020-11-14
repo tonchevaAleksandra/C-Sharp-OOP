@@ -3,6 +3,7 @@
 // Axe durability drop with 5 
 public class Axe
 {
+  
     private int attackPoints;
     private int durabilityPoints;
 
@@ -33,3 +34,4 @@ public class Axe
         this.durabilityPoints -= 1;
     }
 }
+

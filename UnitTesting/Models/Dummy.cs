@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 public class Dummy
 {
     private int health;
@@ -11,7 +12,7 @@ public class Dummy
         this.experience = experience;
     }
 
-    public int Health 
+    public int Health
     {
         get { return this.health; }
     }
@@ -41,3 +42,4 @@ public class Dummy
         return this.health <= 0;
     }
 }
+

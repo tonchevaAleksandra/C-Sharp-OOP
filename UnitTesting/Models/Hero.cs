@@ -1,4 +1,5 @@
-﻿public class Hero
+﻿
+public class Hero
 {
     private string name;
     private int experience;
