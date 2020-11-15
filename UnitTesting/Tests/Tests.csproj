@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DependancyInjectionPractice\DependancyInjectionPractice.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 

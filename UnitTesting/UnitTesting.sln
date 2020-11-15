@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDemos.Test", "TestDemos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNUnit.Tests", "..\TestNUnit.Tests\TestNUnit.Tests.csproj", "{82E7FB53-8B26-4415-9B3B-3693CAD4DEFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{6AD4388F-9ECE-439A-8F3B-B427525587EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{6AD4388F-9ECE-439A-8F3B-B427525587EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{60FB01CE-95C9-499D-9C40-C1CA11DC57E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{60FB01CE-95C9-499D-9C40-C1CA11DC57E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependancyInjectionPractice", "DependancyInjectionPractice\DependancyInjectionPractice.csproj", "{8D2477D7-D68C-4112-A284-F13C70853025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{60FB01CE-95C9-499D-9C40-C1CA11DC57E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60FB01CE-95C9-499D-9C40-C1CA11DC57E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60FB01CE-95C9-499D-9C40-C1CA11DC57E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2477D7-D68C-4112-A284-F13C70853025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2477D7-D68C-4112-A284-F13C70853025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2477D7-D68C-4112-A284-F13C70853025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2477D7-D68C-4112-A284-F13C70853025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
