@@ -1,7 +1,8 @@
 ﻿using System;
+using Models;
 
 // Axe durability drop with 5 
-public class Axe
+public class Axe:IWeapon
 {
   
     private int attackPoints;
@@ -23,7 +24,7 @@ public class Axe
         get { return this.durabilityPoints; }
     }
 
-    public void Attack(Dummy target)
+    public void Attack(ITarget target)
     {
         if (this.durabilityPoints <= 0)
         {

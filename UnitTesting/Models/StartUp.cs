@@ -1,10 +1,8 @@
-﻿namespace Models
+﻿
+public class StartUp
 {
-    public class StartUp
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-        }
     }
-
 }
+
