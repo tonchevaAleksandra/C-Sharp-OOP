@@ -1,5 +1,5 @@
 ﻿using System;
-using Models;
+
 
 // Axe durability drop with 5 
 public class Axe:IWeapon

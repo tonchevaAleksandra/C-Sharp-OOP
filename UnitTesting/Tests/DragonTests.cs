@@ -1,4 +1,4 @@
-﻿using DependancyInjectionPractice.Fakes;
+﻿using Moq;
 using NUnit.Framework;
 
 namespace DependancyInjectionPractice
@@ -10,11 +10,16 @@ namespace DependancyInjectionPractice
         public void DragonShouldIntroduceItsName()
         {
             const string name = "Drago";
-            var introducer = new FakeIntroducer();
-            var dragon = new Dragon(name, introducer);
+            //Arrange
+            var fakeIntroducer = new Mock<IIntroducable>();
+            var introducedMessage = string.Empty;
+            fakeIntroducer.Setup(i => i.Introduce(It.IsAny<string>()))
+              .Callback((string message) => introducedMessage = message);
+
+            var dragon = new Dragon(name, fakeIntroducer.Object);
 
             dragon.Introduce();
-            Assert.That(introducer.Message, Is.EqualTo($"My name is {name}! I am an ancient..."));
+            Assert.That(introducedMessage, Is.EqualTo($"My name is {name}! I am an ancient..."));
         }
     }
 }
