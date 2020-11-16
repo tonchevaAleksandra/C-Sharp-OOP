@@ -53,9 +53,9 @@ namespace Tests
             long actualID = this.person.Id;
             string actualUSer = this.person.UserName;
 
-            Assert.That(expectedID, Is.EqualTo(actualID));
-            Assert.That(expectedUserName, Is.EqualTo(actualUSer));
-           
+            Assert.That(actualUSer, Is.EqualTo(expectedUserName));
+            Assert.That(actualID, Is.EqualTo(expectedID));
+            
         }
 
         [Test]
@@ -66,7 +66,7 @@ namespace Tests
             this.extendedDatabase = new ExtendedDatabase(persons);
             int actualCount = this.extendedDatabase.Count;
 
-            Assert.That(expectedCount, Is.EqualTo(actualCount));
+            Assert.That(actualCount, Is.EqualTo(expectedCount));
 
         }
 
@@ -119,7 +119,7 @@ namespace Tests
 
             int actualCount = this.extendedDatabase.Count;
 
-            Assert.That(expectedCount, Is.EqualTo(actualCount));
+            Assert.That(actualCount, Is.EqualTo(expectedCount));
         }
 
         [Test]

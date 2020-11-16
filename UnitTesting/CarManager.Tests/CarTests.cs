@@ -27,21 +27,16 @@ namespace Tests
         public void MakeShouldBeSetCorrectly()
         {
             string expectedMake = "Ford";
-            Assert.That(expectedMake, Is.EqualTo(this.initialCar.Make));
+            Assert.That(this.initialCar.Make, Is.EqualTo(expectedMake));
         }
 
-        [Test]
-        public void MakeShouldThrowExcWhenValueNullOrEmpty()
+        [TestCase("")]
+        [TestCase(null)]
+        public void MakeShouldThrowExcWhenValueNullOrEmpty(string make)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                new Car(null, "Fiesta", 5.00, 45.00);
-
-            }, "Make cannot be null or empty!");
-
-            Assert.Throws<ArgumentException>(() =>
-            {
-                new Car(string.Empty, "Fiesta", 5.00, 45.00);
+                new Car(make, "Fiesta", 5.00, 45.00);
 
             }, "Make cannot be null or empty!");
 
@@ -55,12 +50,13 @@ namespace Tests
             Assert.That(this.initialCar.Model, Is.EqualTo(expectedModel));
         }
 
-        [Test]
-        public void ModelShouldThrowExcWhenValueNullOrEmpty()
+        [TestCase("")]
+        [TestCase(null)]
+        public void ModelShouldThrowExcWhenValueNullOrEmpty(string model)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                Car car2 = new Car("BMW", "", 10.8, 55);
+                Car car2 = new Car("BMW", model, 10.8, 55);
 
             }, "Model cannot be null or empty!");
         }
@@ -73,18 +69,15 @@ namespace Tests
             Assert.That(this.initialCar.FuelConsumption, Is.EqualTo(expectedFuelConsumption));
         }
 
-        [Test]
-        public void FuelConsumptionShouldThrowExcWhenValueZeroOrNegative()
+        [TestCase(0)]
+        [TestCase(-5)]
+        public void FuelConsumptionShouldThrowExcWhenValueZeroOrNegative(double fuelConsumption)
         {
             Assert.Throws<ArgumentException>(() =>
                 {
-                    new Car("Ford", "Fiesta", 0, 50.00);
+                    new Car("Ford", "Fiesta", fuelConsumption, 50.00);
                 }, "Fuel consumption cannot be zero or negative!");
 
-            Assert.Throws<ArgumentException>(() =>
-            {
-                new Car("Ford", "Fiesta", -5, 50.00);
-            }, "Fuel consumption cannot be zero or negative!");
         }
 
         [Test]
@@ -95,18 +88,15 @@ namespace Tests
             Assert.That(this.initialCar.FuelCapacity, Is.EqualTo(expectedCapacity));
         }
 
-        [Test]
-        public void FuelCapacityShouldThrowExcWhenValueZeroOrNegative()
+        [TestCase(0)]
+        [TestCase(-5)]
+        public void FuelCapacityShouldThrowExcWhenValueZeroOrNegative(double fuelCapacity)
         {
             Assert.Throws<ArgumentException>(() =>
             {
-                new Car("Audi", "Q7", 17.0, 0);
+                new Car("Audi", "Q7", 17.0, fuelCapacity);
             }, "Fuel capacity cannot be zero or negative!");
 
-            Assert.Throws<ArgumentException>(() =>
-            {
-                new Car("Audi", "Q7", 17.0, -5);
-            }, "Fuel capacity cannot be zero or negative!");
         }
 
         [Test]
