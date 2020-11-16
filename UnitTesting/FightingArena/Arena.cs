@@ -2,52 +2,51 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FightingArena
+
+public class Arena
 {
-    public class Arena
+    private readonly List<Warrior> warriors;
+
+    public Arena()
     {
-        private readonly List<Warrior> warriors;
+        this.warriors = new List<Warrior>();
+    }
 
-        public Arena()
+    public IReadOnlyCollection<Warrior> Warriors =>
+        this.warriors;
+
+    public int Count => this.warriors.Count;
+
+    public void Enroll(Warrior warrior)
+    {
+        if (this.warriors.Any(w => w.Name == warrior.Name))
         {
-            this.warriors = new List<Warrior>();
+            throw new InvalidOperationException("Warrior is already enrolled for the fights!");
         }
 
-        public IReadOnlyCollection<Warrior> Warriors =>
-            this.warriors;
+        this.warriors.Add(warrior);
+    }
 
-        public int Count => this.warriors.Count;
+    public void Fight(string attackerName, string defenderName)
+    {
+        Warrior attacker = this.warriors
+            .FirstOrDefault(w => w.Name == attackerName);
+        Warrior defender = this.warriors
+            .FirstOrDefault(w => w.Name == defenderName);
 
-        public void Enroll(Warrior warrior)
+        if (attacker == null || defender == null)
         {
-            if (this.warriors.Any(w => w.Name == warrior.Name))
+            string missingName = attackerName;
+
+            if (defender == null)
             {
-                throw new InvalidOperationException("Warrior is already enrolled for the fights!");
+                missingName = defenderName;
             }
 
-            this.warriors.Add(warrior);
+            throw new InvalidOperationException($"There is no fighter with name {missingName} enrolled for the fights!");
         }
 
-        public void Fight(string attackerName, string defenderName)
-        {
-            Warrior attacker = this.warriors
-                .FirstOrDefault(w => w.Name == attackerName);
-            Warrior defender = this.warriors
-                .FirstOrDefault(w => w.Name == defenderName);
-
-            if (attacker == null || defender == null)
-            {
-                string missingName = attackerName;
-
-                if (defender == null)
-                {
-                    missingName = defenderName;
-                }
-
-                throw new InvalidOperationException($"There is no fighter with name {missingName} enrolled for the fights!");
-            }
-
-            attacker.Attack(defender);
-        }
+        attacker.Attack(defender);
     }
 }
+
