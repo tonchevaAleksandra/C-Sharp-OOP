@@ -17,7 +17,7 @@ public class HeroTests
        var fakeTarget = new Mock<ITarget>();
         fakeTarget
             .Setup(t => t.IsDead())
-            .Returns(true);
+            .Returns(true);//usefull when we have not void 
         fakeTarget
             .Setup(t => t.GiveExperience())
             .Returns(experience);

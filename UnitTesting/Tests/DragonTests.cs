@@ -14,7 +14,7 @@ namespace DependancyInjectionPractice
             var fakeIntroducer = new Mock<IIntroducable>();
             var introducedMessage = string.Empty;
             fakeIntroducer.Setup(i => i.Introduce(It.IsAny<string>()))
-              .Callback((string message) => introducedMessage = message);
+              .Callback((string message) => introducedMessage = message);//Callback=> when is void=>else use Returns
 
             var dragon = new Dragon(name, fakeIntroducer.Object);
 
