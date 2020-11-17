@@ -40,7 +40,7 @@ namespace Tests
             this.arena.Enroll(warriorToEnroll);
 
             Assert.That(this.arena.Count, Is.EqualTo(expectedCount));
-            CollectionAssert.Contains(this.arena.Warriors,warriorToEnroll);
+            Assert.That(this.arena.Warriors, Has.Member(warriorToEnroll));
 
         }
 
@@ -83,6 +83,7 @@ namespace Tests
                 this.arena.Fight(this.attacker.Name, this.deffender.Name);
             });
         }
+
         [Test]
         public void Fight_Should_Throw_Exception_When_Missing_Deffender()
         {
@@ -93,6 +94,7 @@ namespace Tests
                 this.arena.Fight(this.attacker.Name, this.deffender.Name);
             });
         }
+
         [Test]
         public void Fight_Should_Throw_Exception_When_Missing_The_Two_Warriors()
         {
@@ -102,6 +104,7 @@ namespace Tests
                 this.arena.Fight(this.attacker.Name, this.deffender.Name);
             });
         }
+
         [Test]
         public void Fight_Should_Work_With_Corrects_Parameters()
         {
