@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Array String ReadLine Snippet</Title>
+			<Shortcut>cras</Shortcut>
+			<Description></Description>
+			<Author>Aleksandra Toncheva</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemConsole</ID>
+					<Function>SimpleTypeName(global::System.Console)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[ string[] names = Console.ReadLine()
+                .Split()
+                .ToArray();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

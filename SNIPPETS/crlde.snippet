@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>List Decimal ReadLine Snippet</Title>
+			<Shortcut>crlde</Shortcut>
+			<Description></Description>
+			<Author>Aleksandra Toncheva</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="false">
+					<ID>SystemConsole</ID>
+					<Function>SimpleTypeName(global::System.Console)</Function>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[ List<decimal> numbers = Console.ReadLine()
+        .Split()
+        .Select(decimal.Parse)
+        .ToList();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
