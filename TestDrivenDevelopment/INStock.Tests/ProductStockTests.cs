@@ -72,6 +72,7 @@
             Assert.That(secondProductInStock.Price, Is.EqualTo(this.anotherProduct.Price));
             Assert.That(secondProductInStock.Quantity, Is.EqualTo(this.anotherProduct.Quantity));
         }
+
         [Test]
         public void RemoveShouldReturnTrueIfExistingProductIsRemoved()
         {

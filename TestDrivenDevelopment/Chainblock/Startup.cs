@@ -1,12 +1,9 @@
-﻿namespace INStock
+﻿namespace Chainblock
 {
-    using System;
-    
-    public class StartUp
+    public class Startup
     {
         public static void Main(string[] args)
         {
-            
         }
     }
 }
