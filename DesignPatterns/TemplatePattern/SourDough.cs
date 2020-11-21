@@ -4,6 +4,10 @@ namespace TemplatePattern
 {
     public class SourDough : Bread
     {
+        public SourDough()
+        {
+
+        }
         public override void MixIngredients()
         {
             Console.WriteLine("Gathering ingredients for Sourdough Bread!");
