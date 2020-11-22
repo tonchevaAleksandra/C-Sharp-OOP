@@ -21,8 +21,8 @@ namespace ProductCatalog.Utilities
             services.AddScoped<ProductPage>();
             services.AddScoped<IProductService, ProductService>();
 
-            services.AddDbContext<ApplicationDBContext>(o=>o.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=dotnet-productcatalog;Trusted_Connection=True;MultipleActiveResultSets=true"));
-
+            services.AddDbContext<ApplicationDBContext>(o=>o.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFGetStarted.ConsoleApp.NewDb;Trusted_Connection=True;"));
+          
             return services.BuildServiceProvider();
         }
     }
