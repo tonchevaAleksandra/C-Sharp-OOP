@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotService", "RobotService.csproj", "{DC44BE55-F0EF-48DC-A057-C9C8B8FA57F8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Computers", "Computers\Computers.csproj", "{B84E0185-6BD7-4F1E-B95D-9CEC054238C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Computers.Tests", "Computers.Tests\Computers.Tests.csproj", "{2692000C-8D24-44DB-855B-848B62E71F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DC44BE55-F0EF-48DC-A057-C9C8B8FA57F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC44BE55-F0EF-48DC-A057-C9C8B8FA57F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC44BE55-F0EF-48DC-A057-C9C8B8FA57F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84E0185-6BD7-4F1E-B95D-9CEC054238C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84E0185-6BD7-4F1E-B95D-9CEC054238C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84E0185-6BD7-4F1E-B95D-9CEC054238C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84E0185-6BD7-4F1E-B95D-9CEC054238C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2692000C-8D24-44DB-855B-848B62E71F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2692000C-8D24-44DB-855B-848B62E71F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2692000C-8D24-44DB-855B-848B62E71F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2692000C-8D24-44DB-855B-848B62E71F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
