@@ -10,7 +10,6 @@ namespace EasterRaces.Models.Cars.Entities
         private const int MinimunSymbolsForModel = 4;
         private string model;
       
-
         public Car(string model, int horsePower)
         {
             this.Model = model;
@@ -23,7 +22,7 @@ namespace EasterRaces.Models.Cars.Entities
             {
                 return this.model;
             }
-            set
+           private set
             {
                 if (String.IsNullOrWhiteSpace(value) || value.Length < MinimunSymbolsForModel)
                 {
@@ -36,9 +35,8 @@ namespace EasterRaces.Models.Cars.Entities
         }
 
         public abstract int HorsePower { get; protected set; }
-   
     
-        public abstract double CubicCentimeters { get; }
+        public abstract double CubicCentimeters { get;}
 
         public double CalculateRacePoints(int laps)
         {

@@ -1,6 +1,6 @@
-﻿
+﻿using System;
+
 using EasterRaces.Utilities.Messages;
-using System;
 
 namespace EasterRaces.Models.Cars.Entities
 {
@@ -10,21 +10,13 @@ namespace EasterRaces.Models.Cars.Entities
         private const int MinHP = 400;
         private const int MaxHP = 600;
 
-       
-        private int horsePower;
-
-
+       private int horsePower;
         public MuscleCar(string model, int horsePower) 
-            :base(model, horsePower)
-          
+            :base(model, horsePower)        
         {
-            //this.Model = model;
-            //this.HorsePower = horsePower;
             this.CubicCentimeters = CCentimeters;
         }
-
         public override double CubicCentimeters { get; }
-
 
         public override int HorsePower
         {
