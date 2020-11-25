@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasterRaces", "EasterRaces\EasterRaces.csproj", "{0C5F4EAB-0331-4CB9-AA56-AD1C235EB64C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRace", "TheRace\TheRace.csproj", "{E559F838-8384-44B3-947F-FA46D8A4EA2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRace.Tests", "TheRace.Tests\TheRace.Tests.csproj", "{6FC0B038-EA64-4908-977B-46475BF7A878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0C5F4EAB-0331-4CB9-AA56-AD1C235EB64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C5F4EAB-0331-4CB9-AA56-AD1C235EB64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C5F4EAB-0331-4CB9-AA56-AD1C235EB64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E559F838-8384-44B3-947F-FA46D8A4EA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E559F838-8384-44B3-947F-FA46D8A4EA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E559F838-8384-44B3-947F-FA46D8A4EA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E559F838-8384-44B3-947F-FA46D8A4EA2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC0B038-EA64-4908-977B-46475BF7A878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC0B038-EA64-4908-977B-46475BF7A878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC0B038-EA64-4908-977B-46475BF7A878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC0B038-EA64-4908-977B-46475BF7A878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
