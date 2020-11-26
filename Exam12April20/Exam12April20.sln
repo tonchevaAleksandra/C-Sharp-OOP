@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CounterStrike", "CounterStrike.csproj", "{9B37AFC5-77A3-4637-A818-005D6E4FC664}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robots", "Robots\Robots.csproj", "{D465C41C-F5DF-4EEA-8280-D9E1C4F5115E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robots.Tests", "Robots.Tests\Robots.Tests.csproj", "{C1A21A3A-5E33-45F2-A49D-585494D90BBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9B37AFC5-77A3-4637-A818-005D6E4FC664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B37AFC5-77A3-4637-A818-005D6E4FC664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B37AFC5-77A3-4637-A818-005D6E4FC664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D465C41C-F5DF-4EEA-8280-D9E1C4F5115E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D465C41C-F5DF-4EEA-8280-D9E1C4F5115E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D465C41C-F5DF-4EEA-8280-D9E1C4F5115E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D465C41C-F5DF-4EEA-8280-D9E1C4F5115E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A21A3A-5E33-45F2-A49D-585494D90BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A21A3A-5E33-45F2-A49D-585494D90BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A21A3A-5E33-45F2-A49D-585494D90BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A21A3A-5E33-45F2-A49D-585494D90BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
