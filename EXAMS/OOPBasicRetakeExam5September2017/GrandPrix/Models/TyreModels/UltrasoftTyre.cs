@@ -3,7 +3,7 @@
 public class UltrasoftTyre : Tyre
 {
     private const string TyreName = "Ultrasoft";
-
+    private double degradation;
     public UltrasoftTyre(double hardness, float grip)
         : base(TyreName, hardness)
     {
@@ -13,13 +13,14 @@ public class UltrasoftTyre : Tyre
 
     public override double Degradation
     {
-        get => base.Degradation;
+        get => this.degradation;
         protected set
         {
             if (value < 30)
             {
                 throw new ArgumentException("The tyre blows up!");
             }
+            this.degradation = value;
         }
     }
     public override void ReduceDegradation()

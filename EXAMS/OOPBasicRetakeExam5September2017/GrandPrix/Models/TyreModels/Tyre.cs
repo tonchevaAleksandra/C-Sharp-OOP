@@ -8,9 +8,9 @@ public abstract class Tyre : ITyre
 
     protected Tyre( string name, double hardness)
     {
+        this.Name = name;
         this.Hardness = hardness;
         this.Degradation = InitialDegradation;
-        this.Name = name;
     }
     public  string Name { get; private set; }
 
