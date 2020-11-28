@@ -10,7 +10,7 @@ namespace PlayersAndMonsters.Repositories
 {
     public class CardRepository : ICardRepository
     {
-        private ICollection<ICard> cards;
+        private readonly ICollection<ICard> cards;
         public CardRepository()
         {
             this.cards = new List<ICard>();
@@ -22,7 +22,7 @@ namespace PlayersAndMonsters.Repositories
         public void Add(ICard card)
         {
             CheckIfCardIsNull(card);
-            if(this.Cards.Any(c=>c.Name==card.Name))
+            if (this.Cards.Any(c => c.Name == card.Name))
             {
                 throw new ArgumentException(ExceptionMessages.CardAlreadyExist, card.Name);
             }
@@ -34,6 +34,7 @@ namespace PlayersAndMonsters.Repositories
 
         public ICard Find(string name)
         {
+
             return this.cards.FirstOrDefault(c => c.Name == name);
         }
 

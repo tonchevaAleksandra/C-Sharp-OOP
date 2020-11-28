@@ -10,7 +10,7 @@ namespace PlayersAndMonsters.Repositories
 {
     public class PlayerRepository : IPlayerRepository
     {
-        private ICollection<IPlayer> players;
+        private readonly ICollection<IPlayer> players;
 
         public PlayerRepository()
         {
@@ -35,7 +35,8 @@ namespace PlayersAndMonsters.Repositories
 
         public IPlayer Find(string username)
         {
-            return this.players.FirstOrDefault(p => p.Username == username);
+            IPlayer player = this.players.FirstOrDefault(p => p.Username == username);
+            return player;
         }
 
         public bool Remove(IPlayer player)

@@ -1,18 +1,18 @@
-﻿using PlayersAndMonsters.Common;
-using PlayersAndMonsters.Models.Players.Contracts;
-using PlayersAndMonsters.Repositories.Contracts;
-using System;
+﻿using System;
 
+using PlayersAndMonsters.Common;
+using PlayersAndMonsters.Repositories.Contracts;
+using PlayersAndMonsters.Models.Players.Contracts;
 
 namespace PlayersAndMonsters.Models.Players
 {
     public abstract class Player : IPlayer
     {
         private const int MinHealth = 0;
-        private string name;
+        private string username;
         private int health;
-        private ICardRepository cardRepository;
-        public Player(ICardRepository cardRepository, string username, int health)
+        private readonly ICardRepository cardRepository;
+        protected Player(ICardRepository cardRepository, string username, int health)
         {
             this.cardRepository = cardRepository;
             this.Username = username;
@@ -22,7 +22,7 @@ namespace PlayersAndMonsters.Models.Players
 
         public string Username
         {
-            get => this.name;
+            get => this.username;
             private set
             {
                 if(string.IsNullOrEmpty(value))
@@ -30,7 +30,7 @@ namespace PlayersAndMonsters.Models.Players
                     throw new ArgumentException(ExceptionMessages.PlayerNameCannotBeEmpty);
                 }
 
-                this.name = value;
+                this.username = value;
             }
         }
 
@@ -48,7 +48,7 @@ namespace PlayersAndMonsters.Models.Players
             }
         }
 
-        public bool IsDead => this.Health>MinHealth;
+        public bool IsDead => this.Health<=MinHealth;
 
         public void TakeDamage(int damagePoints)
         {

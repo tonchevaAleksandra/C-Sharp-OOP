@@ -11,7 +11,7 @@ namespace PlayersAndMonsters.Models.Cards
         private int damagePoints;
         private int healthPoints;
 
-        public Card(string name, int damagePoints, int healthPoints)
+        protected Card(string name, int damagePoints, int healthPoints)
         {
             this.Name = name;
             this.DamagePoints = damagePoints;
@@ -22,7 +22,7 @@ namespace PlayersAndMonsters.Models.Cards
             get => this.name;
             private set
             {
-                if(String.IsNullOrEmpty(value))
+                if (String.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException(ExceptionMessages.CardNameCannotBeNull);
                 }
@@ -36,7 +36,7 @@ namespace PlayersAndMonsters.Models.Cards
             get => this.damagePoints;
             set
             {
-                if(value<0)
+                if (value < 0)
                 {
                     throw new ArgumentException(ExceptionMessages.CardDamageCannotBeNegative);
                 }
@@ -49,7 +49,7 @@ namespace PlayersAndMonsters.Models.Cards
             get => this.healthPoints;
             private set
             {
-                if(value<0)
+                if (value < 0)
                 {
                     throw new ArgumentException(ExceptionMessages.CardHpCannotBeNegative);
                 }
