@@ -1,9 +1,11 @@
-﻿
-public class StartUp
+﻿namespace Grandprix
 {
-    static void Main(string[] args)
+    public class StartUp
     {
+        static void Main(string[] args)
+        {
 
+        }
     }
 }
 
