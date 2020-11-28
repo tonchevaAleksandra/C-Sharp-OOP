@@ -3,7 +3,7 @@ public interface IDriver
 {
     string Name { get; }
     double TotalTime { get; }
-    ICar Car { get; }
+    Car Car { get; }
     double FuelConsumptionPerKm { get; }
     double Speed { get; }
 

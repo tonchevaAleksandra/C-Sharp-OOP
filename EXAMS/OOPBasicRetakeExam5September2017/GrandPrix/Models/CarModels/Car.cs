@@ -2,9 +2,9 @@
 
 public class Car : ICar
 {
-    private const double MaximumCapacity = 160;
+    private const int MaximumCapacity = 160;
     private double fuelAmount;
-    public Car(int hp, double fuelAmount, ITyre tyre)
+    public Car(int hp, double fuelAmount, Tyre tyre)
     {
         this.Hp = hp;
         this.FuelAmount = fuelAmount;
@@ -19,7 +19,8 @@ public class Car : ICar
         {
             if (value > MaximumCapacity)
             {
-                value = MaximumCapacity;
+                this.fuelAmount = MaximumCapacity;
+                return;
             }
             if (value < 0)
             {
@@ -30,6 +31,6 @@ public class Car : ICar
         }
     }
 
-    public ITyre Tyre { get; private set; }
+    public Tyre Tyre { get; private set; }
 }
 

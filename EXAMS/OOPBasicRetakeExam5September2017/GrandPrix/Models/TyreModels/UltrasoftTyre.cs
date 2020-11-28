@@ -5,12 +5,11 @@ public class UltrasoftTyre : Tyre
     private const string TyreName = "Ultrasoft";
 
     public UltrasoftTyre(double hardness, float grip)
-        : base(hardness)
+        : base(hardness, TyreName)
     {
         this.Grip = grip;
     }
     public double Grip { get; private set; }
-    public override string Name => TyreName;
 
     public override double Degradation
     {

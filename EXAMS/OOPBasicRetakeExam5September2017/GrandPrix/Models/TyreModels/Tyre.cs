@@ -6,14 +6,15 @@ public abstract class Tyre : ITyre
     private const double InitialDegradation = 100;
     private double degradation;
 
-    protected Tyre(double hardness)
+    protected Tyre(double hardness, string name)
     {
         this.Hardness = hardness;
         this.Degradation = InitialDegradation;
+        this.Name = name;
     }
-    public abstract string Name { get; }
+    public  string Name { get; private set; }
 
-    public double Hardness { get; }
+    public double Hardness { get; private set; }
 
 
     public virtual double Degradation

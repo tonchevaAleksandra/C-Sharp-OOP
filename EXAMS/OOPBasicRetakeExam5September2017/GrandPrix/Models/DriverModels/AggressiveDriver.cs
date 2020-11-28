@@ -3,7 +3,7 @@ public class AggressiveDriver : Driver
 {
     private const double FuelConsumption = 2.7;
     private const double SpeedMultiplier = 1.3;
-    public AggressiveDriver(string name, ICar car)
+    public AggressiveDriver(string name, Car car)
         : base(name, car, FuelConsumption)
     {
 
