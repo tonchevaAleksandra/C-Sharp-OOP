@@ -21,24 +21,41 @@ namespace PlayersAndMonsters.Models.BattleFields
             if (attackPlayer.GetType().Name == nameof(Beginner))
             {
                 attackPlayer.Health += 40;
-                attackPlayer.CardRepository.Cards.Select(c => c.DamagePoints += 30);
+                foreach (var card in attackPlayer.CardRepository.Cards)
+                {
+                    card.DamagePoints += 30;
+                }
+               
             }
 
             if (enemyPlayer.GetType().Name == nameof(Beginner))
             {
                 enemyPlayer.Health += 40;
-                enemyPlayer.CardRepository.Cards.Select(c => c.DamagePoints += 30);
+
+                foreach (var card in enemyPlayer.CardRepository.Cards)
+                {
+                    card.DamagePoints += 30;
+                }
+               
             }
 
             attackPlayer.Health += attackPlayer.CardRepository.Cards.Select(c => c.HealthPoints).Sum();
             enemyPlayer.Health += enemyPlayer.CardRepository.Cards.Select(c => c.HealthPoints).Sum();
 
-            while (!attackPlayer.IsDead && !enemyPlayer.IsDead)
+            while (true)
             {
-                enemyPlayer.TakeDamage(attackPlayer.CardRepository.Cards.Select(c => c.DamagePoints).Sum());
-                if (!enemyPlayer.IsDead)
+                var attackerDamagePoints = attackPlayer.CardRepository.Cards.Select(c => c.DamagePoints).Sum();
+                enemyPlayer.TakeDamage(attackerDamagePoints);
+                if (enemyPlayer.IsDead)
                 {
-                    attackPlayer.TakeDamage(enemyPlayer.CardRepository.Cards.Select(c => c.DamagePoints).Sum());
+                    break; 
+                }
+
+                var enemyDamagePoints = enemyPlayer.CardRepository.Cards.Select(c => c.DamagePoints).Sum();
+                attackPlayer.TakeDamage(enemyDamagePoints);
+                if(attackPlayer.IsDead)
+                {
+                    break;
                 }
             }
         }

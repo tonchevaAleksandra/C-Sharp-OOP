@@ -79,13 +79,13 @@
             StringBuilder sb = new StringBuilder();
             foreach (var player in this.players.Players)
             {
-                sb.Append(string.Format(ConstantMessages.PlayerReportInfo,player.Username, player.Health, player.CardRepository.Cards.Count));
+                sb.AppendLine(string.Format(ConstantMessages.PlayerReportInfo,player.Username, player.Health, player.CardRepository.Cards.Count));
 
                 foreach (var card in player.CardRepository.Cards)
                 {
-                    sb.Append(string.Format(ConstantMessages.CardReportInfo, card.Name, card.DamagePoints));
+                    sb.AppendLine(string.Format(ConstantMessages.CardReportInfo, card.Name, card.DamagePoints));
                 }
-                sb.Append(ConstantMessages.DefaultReportSeparator);
+                sb.AppendLine(ConstantMessages.DefaultReportSeparator);
             }
 
             return sb.ToString().Trim();

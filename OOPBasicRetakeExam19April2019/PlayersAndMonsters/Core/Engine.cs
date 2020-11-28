@@ -49,6 +49,10 @@ namespace PlayersAndMonsters.Core
                     else if(command=="Report")
                     {
                         this.writer.WriteLine(this.controller.Report());
+                      
+                    }
+                    else if(command=="Exit")
+                    {
                         break;
                     }
                 }
