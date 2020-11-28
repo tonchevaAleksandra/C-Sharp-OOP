@@ -2,7 +2,7 @@
 
 public class Car : ICar
 {
-    private const int MaximumCapacity = 160;
+    private const double MaximumCapacity = 160;
     private double fuelAmount;
     public Car(int hp, double fuelAmount, Tyre tyre)
     {
@@ -17,17 +17,21 @@ public class Car : ICar
         get => this.fuelAmount;
         private set
         {
-            if (value > MaximumCapacity)
-            {
-                this.fuelAmount = MaximumCapacity;
-                return;
-            }
             if (value < 0)
             {
                 throw new ArgumentException("FuelAmount cannot be negative!");
             }
+            if (value > MaximumCapacity)
+            {
+                this.fuelAmount = MaximumCapacity;
+               
+            }
 
-            this.fuelAmount = value;
+            else
+            {
+                this.fuelAmount = value;
+            }
+            
         }
     }
 

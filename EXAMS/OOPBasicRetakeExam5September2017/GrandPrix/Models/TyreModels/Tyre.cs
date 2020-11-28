@@ -6,7 +6,7 @@ public abstract class Tyre : ITyre
     private const double InitialDegradation = 100;
     private double degradation;
 
-    protected Tyre(double hardness, string name)
+    protected Tyre( string name, double hardness)
     {
         this.Hardness = hardness;
         this.Degradation = InitialDegradation;
@@ -29,6 +29,11 @@ public abstract class Tyre : ITyre
 
             this.degradation = value;
         }
+    }
+
+    public virtual void ReduceDegradation()
+    {
+        this.Degradation -= this.Hardness;
     }
 }
 

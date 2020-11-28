@@ -5,7 +5,7 @@ public class UltrasoftTyre : Tyre
     private const string TyreName = "Ultrasoft";
 
     public UltrasoftTyre(double hardness, float grip)
-        : base(hardness, TyreName)
+        : base(TyreName, hardness)
     {
         this.Grip = grip;
     }
@@ -21,6 +21,10 @@ public class UltrasoftTyre : Tyre
                 throw new ArgumentException("The tyre blows up!");
             }
         }
+    }
+    public override void ReduceDegradation()
+    {
+        this.Degradation-=(this.Hardness+this.Grip);
     }
 }
 

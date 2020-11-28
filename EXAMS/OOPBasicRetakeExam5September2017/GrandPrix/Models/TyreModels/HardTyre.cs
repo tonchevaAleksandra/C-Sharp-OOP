@@ -1,9 +1,9 @@
 ﻿
 public class HardTyre : Tyre
 {
-    private const string TyreName = "HardTyre";
+    private const string TyreName = "Hard";
     public HardTyre(double hardness )
-        : base(hardness, TyreName)
+        : base(TyreName, hardness)
     {
     }
 }
