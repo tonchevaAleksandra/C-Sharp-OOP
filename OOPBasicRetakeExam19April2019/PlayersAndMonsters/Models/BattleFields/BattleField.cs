@@ -35,10 +35,10 @@ namespace PlayersAndMonsters.Models.BattleFields
 
             while (!attackPlayer.IsDead && !enemyPlayer.IsDead)
             {
-                enemyPlayer.TakeDamage(attackPlayer.CardRepository.Cards.Sum(c => c.DamagePoints));
+                enemyPlayer.TakeDamage(attackPlayer.CardRepository.Cards.Select(c => c.DamagePoints).Sum());
                 if (!enemyPlayer.IsDead)
                 {
-                    attackPlayer.TakeDamage(enemyPlayer.CardRepository.Cards.Sum(c => c.DamagePoints));
+                    attackPlayer.TakeDamage(enemyPlayer.CardRepository.Cards.Select(c => c.DamagePoints).Sum());
                 }
             }
         }

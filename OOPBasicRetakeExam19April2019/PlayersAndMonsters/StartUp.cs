@@ -15,7 +15,10 @@
     {
         public static void Main(string[] args)
         {
-           
+            IWriter writer = new ConsoleWriter();
+            IReader reader = new ConsoleReader();
+            IEngine engine = new Engine(writer, reader);
+            engine.Run();
         }
     }
 }

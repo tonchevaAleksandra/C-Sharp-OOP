@@ -3,6 +3,7 @@
 using PlayersAndMonsters.Common;
 using PlayersAndMonsters.Repositories.Contracts;
 using PlayersAndMonsters.Models.Players.Contracts;
+using System.Text;
 
 namespace PlayersAndMonsters.Models.Players
 {
@@ -65,5 +66,19 @@ namespace PlayersAndMonsters.Models.Players
                 this.Health -= damagePoints;
             }
         }
+
+        //public override string ToString()
+        //{
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine($"Username: {this.Username} - Health: {this.Health} – Cards { this.CardRepository.Count}");
+
+        //    foreach (var card in this.CardRepository.Cards)
+        //    {
+        //        sb.AppendLine($"Card: {card.Name} - Damage: {card.DamagePoints}");
+        //    }
+        //    sb.AppendLine("###");
+
+        //    return sb.ToString().Trim();
+        //}
     }
 }
