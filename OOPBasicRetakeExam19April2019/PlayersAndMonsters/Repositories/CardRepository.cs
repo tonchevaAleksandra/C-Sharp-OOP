@@ -24,7 +24,7 @@ namespace PlayersAndMonsters.Repositories
             CheckIfCardIsNull(card);
             if (this.Cards.Any(c => c.Name == card.Name))
             {
-                throw new ArgumentException(ExceptionMessages.CardAlreadyExist, card.Name);
+                throw new ArgumentException(string.Format( ExceptionMessages.CardAlreadyExist, card.Name));
             }
 
             this.cards.Add(card);
