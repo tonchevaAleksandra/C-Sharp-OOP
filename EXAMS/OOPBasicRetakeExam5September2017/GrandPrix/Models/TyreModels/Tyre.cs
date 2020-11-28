@@ -13,7 +13,7 @@ public abstract class Tyre : ITyre
     }
     public abstract string Name { get; }
 
-    public double Hardness { get; protected set; }
+    public double Hardness { get; }
 
 
     public virtual double Degradation
