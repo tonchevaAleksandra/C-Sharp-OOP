@@ -19,7 +19,7 @@ public class Car : ICar
         {
             if (value < 0)
             {
-                throw new ArgumentException("FuelAmount cannot be negative!");
+                throw new ArgumentException("Out of fuel");
             }
             if (value > MaximumCapacity)
             {
@@ -36,5 +36,20 @@ public class Car : ICar
     }
 
     public Tyre Tyre { get; private set; }
+
+    public void FuelReducer(int trackLength,double fuelConsumptionPerKm)
+    { 
+        this.FuelAmount -= (trackLength * fuelConsumptionPerKm);
+    }
+
+    public void Refuel(double fuel)
+    {
+        this.FuelAmount += fuel;
+    }
+
+    public void ChageTyre(Tyre tyre)
+    {
+        this.Tyre = tyre;
+    }
 }
 

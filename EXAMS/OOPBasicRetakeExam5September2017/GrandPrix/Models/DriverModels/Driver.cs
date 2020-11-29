@@ -19,5 +19,17 @@ public abstract class Driver : IDriver
     public double FuelConsumptionPerKm { get; private set; }
 
     public virtual double Speed => (this.Car.Hp + this.Car.Tyre.Degradation) / this.Car.FuelAmount;
+
+    public string FailureReason { get; set; }
+
+    public bool IsRacing { get; set; }
+
+    public string Status => this.IsRacing ? this.TotalTime.ToString("f3") : this.FailureReason;
+
+    public void TotalTimeIncreaser(int trackLength)
+    {
+        //“60 / (trackLength / driver’s Speed)”
+        this.TotalTime += 60 / (trackLength / this.Speed);
+    }
 }
 

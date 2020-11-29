@@ -24,7 +24,7 @@ public abstract class Tyre : ITyre
         {
             if (value < 0)
             {
-                throw new ArgumentException("The tyre blows up!");
+                throw new ArgumentException("Blown Tyre");
             }
 
             this.degradation = value;
