@@ -18,7 +18,7 @@ public class UltrasoftTyre : Tyre
         {
             if (value < 30)
             {
-                throw new ArgumentException("The tyre blows up!");
+                throw new ArgumentException("Blown Tyre");
             }
             this.degradation = value;
         }

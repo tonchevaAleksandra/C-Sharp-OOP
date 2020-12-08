@@ -8,11 +8,12 @@ public abstract class Driver : IDriver
         this.TotalTime = 0;
         this.Car = car;
         this.FuelConsumptionPerKm = fuelConsumptionPerKm;
+        this.IsRacing = true;
 
     }
     public string Name { get; private set; }
 
-    public double TotalTime { get; private set; }
+    public double TotalTime { get;  set; }
 
     public Car Car { get; private set; }
 
@@ -30,6 +31,11 @@ public abstract class Driver : IDriver
     {
         //“60 / (trackLength / driver’s Speed)”
         this.TotalTime += 60 / (trackLength / this.Speed);
+    }
+
+    public void AddBoxTimeToTotal()
+    {
+        this.TotalTime += 20;
     }
 }
 

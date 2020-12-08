@@ -13,12 +13,14 @@ public class RaceTower
     private DriverFactory driverFactory;
     private int currentLap;
     private Stack<Driver> crashedDrivers;
+    private Weather weather;
     public RaceTower()
     {
         this.drivers = new List<Driver>();
         this.tyreFactory = new TyreFactory();
         this.driverFactory = new DriverFactory();
         this.crashedDrivers = new Stack<Driver>();
+        this.weather = Weather.Sunny;
 
     }
     public void SetTrackInfo(int lapsNumber, int trackLength)
@@ -57,22 +59,23 @@ public class RaceTower
     {
         string reasonToBox = commandArgs[0];
         string driverName = commandArgs[1];
-   
-        if(this.drivers.Any(d=>d.Name==driverName))
+
+        if (this.drivers.Any(d => d.Name == driverName))
         {
             Driver driver = this.drivers.FirstOrDefault(d => d.Name == driverName);
-            if(reasonToBox=="Refuel")
+            driver.AddBoxTimeToTotal();
+            if (reasonToBox == "Refuel")
             {
                 double fuelamount = double.Parse(commandArgs[2]);
                 driver.Car.Refuel(fuelamount);
-                
+
             }
-            else if(reasonToBox== "ChangeTyres")
+            else if (reasonToBox == "ChangeTyres")
             {
                 string tyreType = commandArgs[2];
                 double hardness = double.Parse(commandArgs[3]);
                 double grid = 0;
-                if(tyreType=="Ultrasoft")
+                if (tyreType == "Ultrasoft")
                 {
                     grid = double.Parse(commandArgs[4]);
                 }
@@ -87,12 +90,12 @@ public class RaceTower
     public string CompleteLaps(List<string> commandArgs)
     {
         int laps = int.Parse(commandArgs[0]);
-
+        StringBuilder sb = new StringBuilder();
         try
         {
             if (laps > this.lapsNumber - this.currentLap)
             {
-                throw new ArgumentException($"There is no time! On lap {this.lapsNumber - this.currentLap}.");
+                throw new ArgumentException($"There is no time! On lap {this.currentLap}.");
             }
         }
         catch (Exception em)
@@ -103,7 +106,10 @@ public class RaceTower
 
         for (int i = 0; i < laps; i++)
         {
-
+            if(this.IsRaceOver())
+            {
+                break;
+            }
             for (int j = 0; j < this.drivers.Count; j++)
             {
                 Driver driver = this.drivers[j];
@@ -120,12 +126,13 @@ public class RaceTower
                 }
             }
 
-
-
             this.currentLap++;
+            string  output = this.Overtaking();
+            sb.AppendLine(output);
+
         }
 
-
+        return sb.ToString().Trim();
     }
 
     public string GetLeaderboard()
@@ -133,7 +140,10 @@ public class RaceTower
         StringBuilder sb = new StringBuilder();
         sb.AppendLine($"Lap {this.currentLap}/{this.lapsNumber}");
 
-        List<Driver> racingDrivers = this.drivers.OrderBy(d => d.TotalTime).ToList();
+        List<Driver> racingDrivers = this.drivers
+            .OrderBy(d => d.TotalTime)
+            .Concat(this.crashedDrivers)
+            .ToList();
 
         for (int i = 0; i < racingDrivers.Count; i++)
         {
@@ -146,15 +156,88 @@ public class RaceTower
 
     public void ChangeWeather(List<string> commandArgs)
     {
-        //TODO: Add some logic here …
+        string weatherString = commandArgs[0];
+        Enum.TryParse(weatherString, out Weather currentWeather);
+        this.weather = currentWeather;
     }
 
+    public string GetWinner()
+    {
+        Driver winner = this.drivers
+            .OrderBy(x => x.TotalTime)
+            .First();
+
+        return $"{winner.Name} wins the race for {winner.TotalTime:F3} seconds.";
+    }
+
+    public bool IsRaceOver()
+    {
+        return this.currentLap == this.lapsNumber;
+    }
     private void Failed(Driver driver, string failureReason)
     {
         this.drivers.Remove(driver);
         driver.FailureReason = failureReason;
         driver.IsRacing = false;
         this.crashedDrivers.Push(driver);
+    }
+
+    private string Overtaking()
+    {
+        StringBuilder sb = new StringBuilder();
+        List<Driver> sortedDrivers = this.drivers
+            .OrderByDescending(d => d.TotalTime)
+            .ToList();
+
+        double overtakingInterval = 2;
+
+        for (int i = 0; i < sortedDrivers.Count-1; i++)
+        {
+            Driver currentDriver = sortedDrivers[i];
+            Driver nextDriver = sortedDrivers[i + 1];
+            bool isOvertakeSucceed = false;
+
+            double diffTime = currentDriver.TotalTime - nextDriver.TotalTime;
+
+            bool isArgessiveDriver, isEnduranceDriver, willCrash;
+
+            CheckForPossibleCrash(currentDriver, out isArgessiveDriver, out isEnduranceDriver, out willCrash);
+
+            if ((isArgessiveDriver || isEnduranceDriver) && diffTime <= 3)
+            {
+                if (willCrash)
+                {
+                    this.Failed(currentDriver, "Crashed");
+                    currentDriver.IsRacing = false;
+                    continue;
+                }
+
+                isOvertakeSucceed = true;
+                overtakingInterval = 3;
+
+            }
+            else if (diffTime <= 2)
+            {
+                isOvertakeSucceed = true;
+            }
+
+            if (isOvertakeSucceed)
+            {
+                currentDriver.TotalTime -= overtakingInterval;
+                nextDriver.TotalTime += overtakingInterval;
+                sb.AppendLine($"{currentDriver.Name} has overtaken {nextDriver.Name} on lap {this.currentLap}.");
+                i++;
+            }
+        }
+
+        return sb.ToString().Trim();
+    }
+
+    private void CheckForPossibleCrash(Driver currentDriver, out bool isArgessiveDriver, out bool isEnduranceDriver, out bool willCrash)
+    {
+        isArgessiveDriver = currentDriver is AggressiveDriver && currentDriver.Car.Tyre is UltrasoftTyre;
+        isEnduranceDriver = currentDriver is EnduranceDriver && currentDriver.Car.Tyre is HardTyre;
+        willCrash = (isArgessiveDriver && this.weather == Weather.Foggy) || (isEnduranceDriver && this.weather == Weather.Rainy);
     }
 
 }
