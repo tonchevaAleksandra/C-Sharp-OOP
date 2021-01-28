@@ -26,6 +26,7 @@ OPEN/CLOSED - to expand the functionality of a class without change it- using  i
 	OCP adds complexity to design
 	No design can be closed against all changes - know which onesto guard
 
+
 LISKOV SUBSTITUTION - to not inherit and change the logic of a base class 
 by ovveriting methods used in the base constructor etc
 
